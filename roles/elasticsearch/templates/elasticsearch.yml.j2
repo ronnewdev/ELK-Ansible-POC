@@ -1,0 +1,8 @@
+cluster.name: my-elk-cluster
+node.name: "{{ ansible_hostname }}"
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+network.host: 0.0.0.0
+http.port: 9200
+discovery.seed_hosts: ["master1_ip", "master2_ip", "master3_ip"]
+cluster.initial_master_nodes: ["master1", "master2", "master3"]
